@@ -2,13 +2,14 @@
 
 import { motion } from "framer-motion";
 import { useState } from "react";
-import { ArrowUpRight, ChevronUp } from "lucide-react";
+import { ArrowUpRight, Building2, ChevronUp } from "lucide-react";
 
 import {
   scrollRevealTallViewport,
   scrollRevealVariants,
   scrollStaggerVariants,
 } from "@/src/components/scroll-reveal";
+import SectionBadge from "@/components/section-badge";
 
 const aboutPoints = [
   {
@@ -39,7 +40,7 @@ const aboutPoints = [
 
 const youtubeVideoId = "ScMzIvxBSi4";
 
-export default function AboutXntrovaSection() {
+export default function AboutCodepieceSection() {
   const [isVideoOpen, setIsVideoOpen] = useState(false);
   const [isAboutExpanded, setIsAboutExpanded] = useState(false);
 
@@ -62,7 +63,7 @@ export default function AboutXntrovaSection() {
             <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(9,17,34,0.25),rgba(9,17,34,0.6))]" />
             <img
               src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=1000&q=80"
-              alt="Xntrova team member"
+              alt="Codepiece team member"
               className="h-full w-full object-cover object-center opacity-80"
             />
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_rgba(135,170,255,0.34),_transparent_34%),linear-gradient(180deg,transparent,rgba(14,26,56,0.68))]" />
@@ -91,10 +92,7 @@ export default function AboutXntrovaSection() {
           >
             <div className="absolute right-0 top-0 h-40 w-40 rounded-full bg-[radial-gradient(circle,rgba(115,143,239,0.14),transparent_70%)]" />
             <div className="relative flex flex-1 flex-col justify-center">
-              <div className="inline-flex w-fit self-start items-center gap-2 rounded-full border border-[rgba(127,135,192,0.2)] bg-[#f6f8ff] px-3 py-1.5 text-[10px] font-bold uppercase tracking-[0.16em] text-[#526fce]">
-                <span className="h-1.5 w-1.5 rounded-full bg-[linear-gradient(135deg,#654bff,#bf65ee)]" />
-                About Xntrova
-              </div>
+              <SectionBadge icon={Building2} label="ABOUT THE CODEPIECE TEAM" />
               <h3 className="mt-3 max-w-lg text-[clamp(27px,2.8vw,40px)] font-black leading-[1.08] tracking-[-0.06em] text-[#171d34]">
                 Driven By Ideas.{" "}
                 <span className="bg-[linear-gradient(100deg,#2458e8,#7035ed_60%,#b22ad1)] bg-clip-text text-transparent">
@@ -103,8 +101,8 @@ export default function AboutXntrovaSection() {
               </h3>
               <p className="mt-3 text-[13px] leading-[1.65] text-[#4f5d75] sm:text-[14px]">
                 {isAboutExpanded
-                  ? "At Xntrova, we bring clear strategy, bold creativity, and digital expertise together to build meaningful brands and measurable growth."
-                  : "At Xntrova, we believe the strongest brands are built on clear strategy, bold creativity, and measurable results."}
+                  ? "At Codepiece, we bring clear strategy, bold creativity, and digital expertise together to build meaningful brands and measurable growth."
+                  : "At Codepiece, we believe the strongest brands are built on clear strategy, bold creativity, and measurable results."}
               </p>
 
               <div className="mt-4 grid grid-cols-2 gap-2">
@@ -144,14 +142,11 @@ export default function AboutXntrovaSection() {
                 className="group relative mt-4 inline-flex w-fit cursor-pointer items-center gap-3 rounded-full bg-[linear-gradient(110deg,#101633,#263b76)] py-1.5 pl-5 pr-1.5 text-xs font-semibold tracking-[0.03em] text-white transition-all duration-300 hover:-translate-y-0.5"
               >
                 {isAboutExpanded ? "Read Less" : "Read More"}
-                <span className="flex h-10 w-10 items-center justify-center rounded-full border border-white/15 bg-white/10 transition-colors group-hover:bg-white/20">
+                <span className="relative flex h-10 w-10 items-center justify-center overflow-hidden rounded-full border border-white/15 bg-white/10 transition-colors group-hover:bg-white/20">
                   {isAboutExpanded ? (
                     <ChevronUp size={17} />
                   ) : (
-                    <ArrowUpRight
-                      size={17}
-                      className="transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
-                    />
+                    <ArrowUpRight size={17} />
                   )}
                 </span>
               </button>
@@ -174,7 +169,7 @@ export default function AboutXntrovaSection() {
                 <iframe
                   className="h-full w-full"
                   src={`https://www.youtube.com/embed/${youtubeVideoId}?autoplay=1&rel=0`}
-                  title="Xntrova video"
+                  title="Codepiece video"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                   allowFullScreen
                 />

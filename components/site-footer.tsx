@@ -18,7 +18,7 @@ const serviceLinks = [
 
 const exploreLinks = [
   { label: "Home", href: "/" },
-  { label: "About Xntrova", href: "/#about" },
+  { label: "About Codepiece", href: "/#about" },
   { label: "Our Work", href: "/#projects" },
   { label: "Technologies", href: "/#technologies" },
 ];
@@ -109,15 +109,15 @@ export default function SiteFooter() {
             <div className="relative">
               <Link
                 href="/"
-                aria-label="Xntrova home"
-                className="group inline-flex rounded-2xl bg-white px-4 py-2.5 transition-transform duration-300 hover:scale-[1.02]"
+                aria-label="Codepiece home"
+                className="group inline-flex items-center rounded-2xl bg-white px-3 py-2.5 transition-transform duration-300 hover:scale-[1.02]"
               >
                 <Image
-                  src="/images/Xntrova-logo.png"
-                  alt="Xntrova - Digital Growth Partner"
-                  width={190}
-                  height={55}
-                  className="h-auto w-[158px] transition-transform duration-300 group-hover:scale-[1.02]"
+                  src="/images/logo.png"
+                  alt="Codepiece - Digital Growth Partner"
+                  width={943}
+                  height={202}
+                  className="h-auto w-[190px]"
                 />
               </Link>
               <div className="mt-6 max-w-sm">
@@ -181,7 +181,7 @@ export default function SiteFooter() {
               </ul>
             </nav>
 
-            <nav aria-label="Explore Xntrova">
+            <nav aria-label="Explore Codepiece">
               <div className="flex items-center justify-between border-b border-white/15 pb-3">
                 <h3 className="text-base font-bold tracking-[-0.02em] text-white">
                   Explore
@@ -239,8 +239,8 @@ export default function SiteFooter() {
           aria-hidden="true"
           className="overflow-hidden pt-8 text-center sm:pt-10"
         >
-          <span className="block select-none whitespace-nowrap text-[clamp(4.4rem,19vw,17rem)] font-black leading-[0.72] tracking-[-0.06em] text-white/[0.08]">
-            XNTROVA
+          <span className="block select-none whitespace-nowrap text-[clamp(2rem,15vw,12rem)] font-black leading-[0.72] tracking-[-0.06em] text-white/[0.08]">
+            Codepiece
           </span>
         </div>
 

@@ -3,13 +3,14 @@
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, Layers3 } from "lucide-react";
 
 import {
   scrollRevealTallViewport,
   scrollRevealVariants,
   scrollStaggerVariants,
 } from "@/src/components/scroll-reveal";
+import SectionBadge from "@/components/section-badge";
 import "./services.css";
 
 const services = [
@@ -90,10 +91,7 @@ export default function ServicesSection() {
           variants={scrollRevealVariants}
           data-scroll-reveal
         >
-          <div className="services-badge">
-            <span />
-            OUR SERVICES
-          </div>
+          <SectionBadge icon={Layers3} label="OUR DIGITAL SERVICES" />
 
           <h2>
             Everything You Need to

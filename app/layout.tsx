@@ -15,8 +15,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "xntrova",
-  description: "xntrova — modern digital experiences",
+  title: "Codepiece",
+  description: "Codepiece — modern digital experiences",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

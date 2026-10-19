@@ -11,6 +11,7 @@ import {
   TrendingUp,
 } from "lucide-react";
 import { usePrefersReducedMotion } from "@/src/hooks/use-prefers-reduced-motion";
+import SectionBadge from "@/components/section-badge";
 
 const rotatingPhrases = ["Business Growth.", "More Leads.", "Higher Revenue."];
 
@@ -98,11 +99,8 @@ export default function Hero() {
           <div className="relative z-10 max-w-[640px]">
             <div className="pointer-events-none absolute -left-16 top-10 h-72 w-72 rounded-full bg-[#457fe4]/10 blur-[90px]" />
             <div className="relative">
-              <div className="relative mb-3 inline-flex items-center gap-2 text-[10px] font-bold uppercase tracking-[0.19em] text-white">
-                <span className="flex h-7 w-7 items-center justify-center rounded-full border border-[#91b6ff]/25 bg-[#6795ff]/15">
-                  <Sparkles size={13} className="text-[#a7d6ff]" />
-                </span>
-                Digital Growth Partner
+              <div className="relative mb-3">
+                <SectionBadge icon={TrendingUp} label="Digital Growth Partner" />
               </div>
 
               <h1 className="mt-4 text-[clamp(1.95rem,4.1vw,3.55rem)] font-bold leading-[1.05] tracking-[-0.06em] text-white [text-wrap:balance]">
@@ -122,7 +120,7 @@ export default function Hero() {
 
               <p className="mt-4 max-w-[550px] text-[13px] leading-6 text-slate-300 sm:text-[15px] sm:leading-7 [text-wrap:pretty]">
                 From high-converting websites to SEO, performance marketing, social media and
-                creative solutions — xntrova brings everything your business needs to grow
+                creative solutions — Codepiece brings everything your business needs to grow
                 digitally, under one roof.
               </p>
 

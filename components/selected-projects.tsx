@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowUpRight, X } from "lucide-react";
+import { ArrowUpRight, FolderKanban, X } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState, type WheelEvent } from "react";
@@ -11,6 +11,7 @@ import {
   scrollRevealVariants,
   scrollStaggerVariants,
 } from "@/src/components/scroll-reveal";
+import SectionBadge from "@/components/section-badge";
 
 import "./selected-projects.css";
 
@@ -58,7 +59,7 @@ export default function SelectedProjectsSection() {
 			<div className="site-container selected-projects-container">
 				<header className="selected-projects-header">
 					<div className="selected-projects-heading">
-						<div className="selected-projects-badge"><span /> OUR DIGITAL WORK</div>
+						<SectionBadge icon={FolderKanban} label="OUR DIGITAL WORK" />
 						<h2>Our Selected <span>Digital Projects</span></h2>
 						<p>We create fast, secure and scalable digital experiences that help modern businesses grow, connect with customers and achieve measurable results.</p>
 					</div>

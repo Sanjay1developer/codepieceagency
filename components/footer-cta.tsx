@@ -1,20 +1,16 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
-import { motion } from "framer-motion";
-import { ArrowUpRight, BarChart3, Sparkles, TrendingUp } from "lucide-react";
-
-import {
-  scrollRevealTallViewport,
-  scrollRevealVariants,
-} from "@/src/components/scroll-reveal";
+import { ArrowUpRight, Sparkles } from "lucide-react";
+import SectionBadge from "@/components/section-badge";
 
 export default function FooterCta() {
   return (
     <section className="site-section site-cta-section bg-white">
       <div
         aria-labelledby="footer-cta-title"
-        className="relative isolate min-h-[280px] w-full overflow-hidden bg-[linear-gradient(115deg,#101633_0%,#172653_52%,#315bdc_100%)] px-6 py-9 text-white shadow-[0_24px_70px_rgba(25,47,115,0.2)] sm:min-h-[300px] sm:px-10 sm:py-11 lg:flex lg:items-center lg:px-14"
+        className="relative isolate min-h-[280px] w-full overflow-hidden bg-[linear-gradient(115deg,#101633_0%,#172653_52%,#315bdc_100%)] px-6 py-9 text-white shadow-[0_24px_70px_rgba(25,47,115,0.2)] sm:min-h-[300px] sm:px-10 sm:py-11 lg:grid lg:grid-cols-[minmax(0,1fr)_minmax(220px,0.62fr)] lg:items-center lg:gap-8 lg:px-14"
       >
         <div
           aria-hidden="true"
@@ -30,10 +26,7 @@ export default function FooterCta() {
         />
 
         <div className="relative z-10 max-w-xl">
-          <div className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/[0.08] px-3 py-1.5 text-[10px] font-semibold uppercase tracking-[0.16em] text-[#dce5ff] backdrop-blur-sm">
-            <Sparkles size={13} aria-hidden="true" />
-            Your next chapter starts here
-          </div>
+          <SectionBadge icon={Sparkles} label="Your next chapter starts here" />
           <h2
             id="footer-cta-title"
             className="mt-5 max-w-lg text-[clamp(30px,4vw,48px)] font-bold leading-[1.08] tracking-[-0.055em]"
@@ -61,82 +54,34 @@ export default function FooterCta() {
 
         <div
           aria-hidden="true"
-          className="pointer-events-none absolute bottom-7 right-[7%] hidden w-[min(34%,440px)] lg:block"
+          className="relative hidden h-[250px] items-center justify-center lg:flex"
         >
-          <div className="absolute -right-5 -top-5 z-10 flex items-center gap-2 rounded-2xl border border-white/20 bg-[#182958]/90 px-4 py-3 shadow-[0_18px_40px_rgba(5,13,42,0.3)] backdrop-blur-xl">
-            <span className="flex h-8 w-8 items-center justify-center rounded-full bg-[#83e4c1]/15 text-[#9af0d0]">
-              <TrendingUp size={16} />
-            </span>
-            <span>
-              <span className="block text-[9px] font-medium text-white/55">
-                Momentum
-              </span>
-              <span className="block text-sm font-bold text-white">+32.8%</span>
-            </span>
+          <div className="relative w-[88%] max-w-[390px] -rotate-3 rounded-[18px] border border-white/35 bg-white/95 p-2 shadow-[0_24px_55px_rgba(5,13,42,0.28)]">
+            <div className="flex h-6 items-center gap-1.5 px-1.5">
+              <span className="h-1.5 w-1.5 rounded-full bg-[#ff8b86]" />
+              <span className="h-1.5 w-1.5 rounded-full bg-[#ffc66e]" />
+              <span className="h-1.5 w-1.5 rounded-full bg-[#6ed6a2]" />
+              <span className="ml-2 h-2.5 w-[42%] rounded-full bg-[#e9edf5]" />
+            </div>
+            <div className="relative aspect-[1.82/1] overflow-hidden rounded-[10px] bg-[#e9edf5]">
+              <Image
+                src="/images/project.webp"
+                alt=""
+                fill
+                sizes="(min-width: 1024px) 34vw, 0px"
+                className="object-cover object-top"
+              />
+            </div>
           </div>
-
-          <div className="overflow-hidden rounded-[24px] border border-white/20 bg-[linear-gradient(145deg,rgba(255,255,255,0.17),rgba(255,255,255,0.07))] p-5 shadow-[0_28px_70px_rgba(5,13,42,0.32)] backdrop-blur-xl">
-            <div className="flex items-center justify-between">
-              <div>
-                <p className="text-[10px] font-semibold uppercase tracking-[0.15em] text-white/55">
-                  Growth overview
-                </p>
-                <p className="mt-1 text-sm font-semibold text-white">
-                  Built around your goals
-                </p>
-              </div>
-              <span className="flex h-9 w-9 items-center justify-center rounded-xl border border-white/15 bg-white/[0.08] text-[#c4d3ff]">
-                <BarChart3 size={17} />
-              </span>
-            </div>
-
-            <div className="relative mt-5 h-[100px] overflow-hidden rounded-xl border border-white/10 bg-[#0d1a3a]/35 px-3 pt-3">
-              <div className="absolute inset-0 flex flex-col justify-between px-3 py-3">
-                <span className="border-t border-dashed border-white/10" />
-                <span className="border-t border-dashed border-white/10" />
-                <span className="border-t border-dashed border-white/10" />
-              </div>
-              <svg
-                viewBox="0 0 360 82"
-                preserveAspectRatio="none"
-                className="relative h-full w-full overflow-visible"
-              >
-                <defs>
-                  <linearGradient id="cta-chart-fill" x1="0" x2="0" y1="0" y2="1">
-                    <stop offset="0%" stopColor="#9eb7ff" stopOpacity=".42" />
-                    <stop offset="100%" stopColor="#9eb7ff" stopOpacity="0" />
-                  </linearGradient>
-                </defs>
-                <path
-                  d="M0 68 C28 62 34 54 58 59 S92 52 112 48 S145 55 169 37 S206 44 228 29 S265 35 285 18 S325 25 360 5 V82 H0 Z"
-                  fill="url(#cta-chart-fill)"
-                />
-                <path
-                  d="M0 68 C28 62 34 54 58 59 S92 52 112 48 S145 55 169 37 S206 44 228 29 S265 35 285 18 S325 25 360 5"
-                  fill="none"
-                  stroke="#b9caff"
-                  strokeLinecap="round"
-                  strokeWidth="3"
-                />
-                <circle cx="360" cy="5" r="4" fill="#a8f0d4" />
-              </svg>
-            </div>
-
-            <div className="mt-4 grid grid-cols-3 divide-x divide-white/10">
-              {[
-                ["01", "Strategy"],
-                ["02", "Creative"],
-                ["03", "Growth"],
-              ].map(([number, label]) => (
-                <div key={number} className="px-3 first:pl-0 last:pr-0">
-                  <span className="block text-[9px] font-semibold tracking-[0.12em] text-white/45">
-                    {number}
-                  </span>
-                  <span className="mt-1 block text-[10px] font-semibold text-white/80">
-                    {label}
-                  </span>
-                </div>
-              ))}
+          <div className="absolute bottom-2 right-0 w-[27%] max-w-[105px] rotate-6 rounded-[16px] border border-white/50 bg-white p-1.5 shadow-[0_18px_40px_rgba(5,13,42,0.3)]">
+            <div className="relative aspect-[0.62/1] overflow-hidden rounded-[11px] bg-[#e9edf5]">
+              <Image
+                src="/images/project.webp"
+                alt=""
+                fill
+                sizes="(min-width: 1024px) 10vw, 0px"
+                className="object-cover object-top"
+              />
             </div>
           </div>
         </div>

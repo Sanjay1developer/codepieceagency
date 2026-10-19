@@ -2,7 +2,8 @@
 
 import { motion } from "framer-motion";
 import { useState, type FormEvent } from "react";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, Mail } from "lucide-react";
+import SectionBadge from "@/components/section-badge";
 
 import {
   scrollRevealTallViewport,
@@ -119,12 +120,7 @@ export default function ContactForm() {
       <div className="site-container relative">
         <div className="grid overflow-hidden rounded-[30px] border border-white bg-white shadow-[0_28px_80px_rgba(29,38,67,0.14)] lg:grid-cols-[1fr_0.92fr]">
           <aside className="flex flex-col justify-center p-7 sm:p-10 lg:p-12">
-            <div className="inline-flex w-fit items-center gap-2 rounded-full border border-[#dce5ff] bg-[#f5f7ff] px-3 py-2 text-[10px] font-bold tracking-[0.08em] text-[#315bdc]">
-              <span className="flex h-6 w-6 items-center justify-center rounded-full bg-[#315bdc] text-white">
-                ✉
-              </span>
-              LET&apos;S TALK ABOUT YOUR NEXT MOVE
-            </div>
+            <SectionBadge icon={Mail} label="Let's talk about your next move" />
             <h1 className="mt-7 max-w-xl text-[clamp(38px,4vw,62px)] font-black leading-[0.98] tracking-[-0.07em] text-[#111827]">
               Let&apos;s build a{" "}
               <span className="bg-[linear-gradient(110deg,#315bdc,#7964df_58%,#a76bd4)] bg-clip-text text-transparent">

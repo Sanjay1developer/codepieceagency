@@ -1,32 +1,34 @@
 "use client";
 
 import { useEffect, useRef, type PointerEvent } from "react";
+import { MessageSquareQuote } from "lucide-react";
+import SectionBadge from "@/components/section-badge";
 
 const testimonials = [
   {
     quote:
-      "Xntrova combines expertise with a human touch. They celebrate our wins, tackle challenges with us, and focus on long-term value.",
+      "Codepiece combines expertise with a human touch. They celebrate our wins, tackle challenges with us, and focus on long-term value.",
     name: "Ankit Gupta",
     role: "Founder",
     initials: "AG",
   },
   {
     quote:
-      "A simple project became a lasting partnership. Xntrova’s proactive team, fresh ideas, and attention to detail put our brand in the right hands.",
+      "A simple project became a lasting partnership. Codepiece’s proactive team, fresh ideas, and attention to detail put our brand in the right hands.",
     name: "Priya",
     role: "CEO",
     initials: "P",
   },
   {
     quote:
-      "Xntrova pairs creativity with practical thinking. Every recommendation has purpose, and every conversation brings clarity and real value.",
+      "Codepiece pairs creativity with practical thinking. Every recommendation has purpose, and every conversation brings clarity and real value.",
     name: "Neha Kapoor",
     role: "Director",
     initials: "NK",
   },
   {
     quote:
-      "Xntrova listened to our needs, brought fresh ideas, and built a clear strategy for our business. The results exceeded our expectations.",
+      "Codepiece listened to our needs, brought fresh ideas, and built a clear strategy for our business. The results exceeded our expectations.",
     name: "Rahul Sharma",
     role: "CEO",
     initials: "RS",
@@ -41,7 +43,7 @@ const testimonials = [
   },
   {
     quote:
-      "Xntrova helped us bring more consistency to our brand and a sharper direction to our marketing. The collaboration felt focused from day one.",
+      "Codepiece helped us bring more consistency to our brand and a sharper direction to our marketing. The collaboration felt focused from day one.",
     name: "Sample Client 2",
     role: "Sample review",
     initials: "S2",
@@ -197,12 +199,7 @@ export default function TestimonialsSection() {
 
       <div className="site-container relative">
         <header className="mx-auto max-w-4xl text-center">
-          <div className="inline-flex items-center gap-3 rounded-full border border-[rgba(127,135,192,0.2)] bg-white/80 px-4 py-2.5 shadow-[0_12px_30px_rgba(90,99,150,0.1)] backdrop-blur-sm">
-            <span className="h-2.5 w-2.5 rounded-full bg-[linear-gradient(135deg,#654bff,#bf65ee)] shadow-[0_0_16px_rgba(113,92,255,0.5)]" />
-            <span className="text-[11px] font-black uppercase tracking-[0.18em] text-[#202847]">
-              TESTIMONIALS
-            </span>
-          </div>
+          <SectionBadge icon={MessageSquareQuote} label="CLIENT STORIES AND REVIEWS" />
 
           <h2 className="mt-6 text-[clamp(36px,4vw,64px)] font-black leading-[1] tracking-[-0.07em] text-[#171d34]">
             Words From Our{" "}
@@ -261,7 +258,7 @@ export default function TestimonialsSection() {
                       <span className="h-2 w-2 rounded-full bg-[linear-gradient(135deg,#2458e8,#b22ad1)]" />
                       {"isSample" in testimonial && testimonial.isSample
                         ? "Sample"
-                        : "Xntrova"}
+                        : "Codepiece"}
                     </div>
                   </div>
 

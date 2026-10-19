@@ -2,7 +2,9 @@
 
 import { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
+import { Workflow } from "lucide-react";
 import { usePrefersReducedMotion } from "@/src/hooks/use-prefers-reduced-motion";
+import SectionBadge from "@/components/section-badge";
 
 const steps = [
   { title: "Discover", description: "Understand your goals and audience." },
@@ -59,12 +61,7 @@ export default function ProcessSection() {
 
       <div className="site-container relative">
         <header className="mx-auto max-w-4xl text-center">
-          <div className="inline-flex items-center gap-3 rounded-full border border-[rgba(127,135,192,0.2)] bg-white/80 px-4 py-2.5 shadow-[0_12px_30px_rgba(90,99,150,0.1)] backdrop-blur-sm">
-            <span className="h-2.5 w-2.5 rounded-full bg-[linear-gradient(135deg,#654bff,#bf65ee)] shadow-[0_0_16px_rgba(113,92,255,0.5)]" />
-            <span className="text-[11px] font-black uppercase tracking-[0.18em] text-[#202847]">
-              PROCESS / HOW WE WORK
-            </span>
-          </div>
+          <SectionBadge icon={Workflow} label="PROCESS / HOW WE WORK" />
 
           <h2 className="mt-6 text-[clamp(36px,4vw,64px)] font-black leading-[1] tracking-[-0.07em] text-[#171d34]">
             A Clear Process.{" "}

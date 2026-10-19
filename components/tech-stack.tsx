@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, Cpu } from "lucide-react";
 import { useState } from "react";
 
 import {
@@ -10,6 +10,7 @@ import {
   scrollRevealVariants,
   scrollStaggerVariants,
 } from "@/src/components/scroll-reveal";
+import SectionBadge from "@/components/section-badge";
 import "./tech-stack.css";
 
 const technologies = [
@@ -49,10 +50,7 @@ export default function TechStackSection() {
     <section className="site-section tech-stack-section" id="technologies">
       <div className="site-container tech-stack-container">
         <div className="tech-stack-header">
-          <div className="tech-stack-badge">
-            <span />
-            TECHNOLOGIES WE USE
-          </div>
+          <SectionBadge icon={Cpu} label="TECHNOLOGIES WE USE" />
 
           <h2>
             Built With Modern <span className="tech-stack-gradient">Technologies</span>

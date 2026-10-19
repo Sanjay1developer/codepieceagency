@@ -1,8 +1,7 @@
 import Header from "@/src/components/layout/Header";
 import Hero from "@/components/hero";
 import ServicesSection from "@/components/services";
-import AboutXntrovaSection from "@/components/about-xntrova";
-import WhyChooseUsSection from "@/components/why-choose-us";
+import AboutCodepieceSection from "@/components/about-codepiece";
 import ProcessSection from "@/components/process-section";
 import TestimonialsSection from "@/components/testimonials";
 import TechStackSection from "@/components/tech-stack";
@@ -16,8 +15,7 @@ export default function Home() {
       <Header />
       <Hero />
       <ServicesSection />
-      <AboutXntrovaSection />
-      <WhyChooseUsSection />
+      <AboutCodepieceSection />
       <ProcessSection />
       <TestimonialsSection />
       <FooterCta />

@@ -194,7 +194,7 @@ export default function Header() {
         {/* ==================== LOGO ==================== */}
         <Link
           href="/"
-          aria-label="xntrova Home"
+          aria-label="Codepiece home"
           className="
             flex shrink-0 items-center
             rounded-full
@@ -203,12 +203,12 @@ export default function Header() {
           "
         >
           <Image
-            src="/images/Xntrova-logo.png"
-            alt="xntrova - Digital Growth Partner"
-            width={190}
-            height={55}
+            src="/images/logo.png"
+            alt="Codepiece - Digital Growth Partner"
+            width={943}
+            height={202}
             priority
-            className="h-auto w-[160px] sm:w-[180px] lg:w-[200px]"
+            className="h-auto w-[180px] sm:w-[200px]"
           />
         </Link>
 
